@@ -159,11 +159,11 @@ class DatabaseSetup
      */
     public function listRemoteAccessUsers()
     {
-        $sth = $this->dbh->prepare("SELECT Host, User, Password FROM mysql.user WHERE Host != 'localhost' AND Host != '127.0.0.1' AND Host != '::1'");
+        $sth = $this->dbh->prepare("SELECT Host, User FROM mysql.user WHERE Host != 'localhost' AND Host != '127.0.0.1' AND Host != '::1'");
         $sth->execute();
         foreach ($sth->fetchAll(PDO::FETCH_ASSOC) as $result)
         {
-            $this->climate->lightBlue("{$result['User']} can be used from {$result['Host']} with password {$result['Password']}");
+            $this->climate->lightBlue("{$result['User']} can be used from {$result['Host']}");
         }
     }
 
