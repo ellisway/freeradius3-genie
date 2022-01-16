@@ -107,14 +107,18 @@ class Genie
                 ];
                 break;
             case "_nas":
+            case "_nas":
                 $options = [
-                    'add' => 'Add NAS',
-                    'remove' => 'Remove NAS',
-                    'addcoa' => 'Add NAS With COA/POD Endpoint',
-                    'removecoa' => 'Remove NAS With COA/POD Endpoint',
-                    'list' => 'List NAS entries',
-                    'changenaspw' => 'Change NAS password',
-                    'changenaspwcoa' => 'Change NAS password with COA/POD endpoint',
+                    'list' => 'List all NAS entries',
+                    '_blank1' =>       '------------------------',
+                    'addcoa' => 'Add NAS with CoA support',
+                    'removecoa' => 'Remove NAS with CoA support',
+                    'changenaspwcoa' => 'Change NAS password with CoA support',
+                    '_blank2' =>       '------------------------',
+                    'add' => 'Add non-CoA NAS entry',
+                    'remove' => 'Remove non-CoA NAS entry',
+                    'changenaspw' => 'Change non-CoA NAS password',
+                    '_blank3' =>       '------------------------',
                 ];
                 break;
             case "_mysqlRemote":
