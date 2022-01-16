@@ -163,7 +163,7 @@ class DatabaseSetup
         $sth->execute();
         foreach ($sth->fetchAll(PDO::FETCH_ASSOC) as $result)
         {
-            $this->climate->lightBlue("{$result['User']} can be used from {$result['Host']}");
+            $this->climate->lightBlue("{$result['User']} can be used from {$result['Host']} with password {$result['Password']}");
         }
     }
 
